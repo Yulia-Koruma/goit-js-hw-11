@@ -4,11 +4,31 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Page title</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,700;1,400&family=Mooli&family=Outfit:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./sass/index.scss" />
-    <script type="module" src="./index.js"></script>
+    <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <!-- ❗️❗️❗️ Add partials like so for every page -->
-    <include src="./partials/example.html"></include>
+    <body>
+    <div class="search-container">
+      <form class="search-form" id="search-form">
+        <input type="text" name="searchQuery" autocomplete="off" placeholder="Search images..." />
+        <button type="submit">
+          <span class="material-icons"><img src="./images/loupe.png" alt="search" width="12px" height="12px"></span>
+        </button>
+      </form>
+    </div>
+
+    <div class="gallery-container">
+      <div class="gallery"></div>
+      <button type="button" class="btn-load-more is-hidden">Load more</button>
+      <a class="btn-to-top" title="Return to top">
+        <span class="material-icons"><img src="./images/arrow.png" alt="arrow" width="38px" height="38px"></span></a
+      >
+    </div>
+
+    <script type="module" src="./index.js"></script>
   </body>
 </html>
